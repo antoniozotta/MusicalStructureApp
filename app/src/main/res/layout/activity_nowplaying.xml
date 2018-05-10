@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".NowplayingActivity">
+
+    <!-- Song Thumbnail Image -->
+    <LinearLayout
+        android:id="@+id/songThumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/paddingLarge_np"
+        android:paddingTop="@dimen/paddingXLarge_np">
+
+        <ImageView
+            android:id="@+id/songArtwork"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/artwork_np"
+            android:contentDescription="@string/artwork_desc"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/perfect" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songThumbnail"
+        android:orientation="vertical"
+>
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/songNamePlaying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="@dimen/song_name"
+            tools:text="Perfect" />
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/artistNamePlaying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="@dimen/artist_name"
+            tools:text="Ed Sheeran" />
+    </LinearLayout>
+    <!-- Player Footer -->
+    <LinearLayout
+        android:id="@+id/player_footer_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/control_panel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/marginLarge_np"
+        android:background="@color/standard_grey"
+        android:gravity="center">
+
+        <!-- Player Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingLarge_np"
+            android:paddingRight="@dimen/paddingLarge_np">
+            <!-- Backward Button -->
+            <ImageButton
+                android:id="@+id/btnBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/back_button_desc"
+                android:src="@drawable/back_button" />
+            <!-- Play Button -->
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/play_button_desc"
+                android:src="@drawable/play_button" />
+            <!-- Forward Button -->
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/forward_button_desc"
+                android:src="@drawable/forward_button" />
+            <!-- Next Button -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Progress Bar/Seek bar -->
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/player_footer_bg"
+        android:layout_marginLeft="@dimen/marginLarge_np"
+        android:layout_marginRight="@dimen/marginLarge_np"
+        android:max="100"
+        android:progress="000" />
+
+    <!-- Timer Display -->
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seek_bar"
+        android:layout_marginBottom="@dimen/marginSmall_np"
+        android:layout_marginLeft="@dimen/marginLarge_np"
+        android:layout_marginRight="@dimen/marginLarge_np">
+        <!-- Current Duration Label -->
+        <TextView
+            android:id="@+id/songCurrentDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/start_time"
+            android:textStyle="bold" />
+        <!-- Total Duration Label -->
+        <TextView
+            android:id="@+id/songTotalDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/end_time"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

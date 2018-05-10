@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">88dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <!-- Now playing dimens -->
+    <dimen name="artwork_np">200dp</dimen>
+    <dimen name="paddingLarge_np">20dp</dimen>
+    <dimen name="paddingXLarge_np">40dp</dimen>
+    <dimen name="marginLarge_np">20dp</dimen>
+    <dimen name="marginSmall_np">10dp</dimen>
+    <dimen name="control_panel">100dp</dimen>
+    <dimen name="artist_name">16sp</dimen>
+    <dimen name="song_name">26sp</dimen>
+    <!-- Item list dimens -->
+    <dimen name="play_button">50dp</dimen>
+    <dimen name="small_song_name">14sp</dimen>
+    <dimen name="small_artwork">70dp</dimen>
+</resources>
